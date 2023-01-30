@@ -1,0 +1,28 @@
+<form>
+  
+  <!-- Manual Method -->
+   <label for="username">Enter UserName:
+     </label> 
+  <input type="text" id="username" 
+    (input)="onValueChange($event)"  
+    [value]="varName"  >
+    
+  <label for="username">Enter UserName:
+     </label>
+     
+     <!-- [(ngModel)] Two-Way Data Binding  -->
+     
+  <input type="text" id="username" 
+  name="username" [(ngModel)]="varName"  >
+   
+  <!-- StingInterPolation {{variableName}}  -->
+  <span> {{varName | uppercase  }} </span> 
+</form>
+
+<button (click)="conClick()" >
+  Click Here </button>
+
+<div class="test" 
+[style.height.px]="height"
+ [style.width.px]="width">
+</div>
